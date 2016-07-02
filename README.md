@@ -2,12 +2,12 @@
 ### JavaScript
 
 Quick Util JavaScript
-//platform
-//browser
-//isNewOpen
-//array remove
-//replace
-//comma
+####platform
+####browser
+####isNewOpen
+####array remove
+####replace
+####comma
 
 
 ## Example
