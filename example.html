@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="UTF-8">
+		<title>Util</title>
+	</head>
+	<body>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="common.js"></script>
+		<br><br>
+    <div id="util"></div><br>
+    <div id="replace"></div><br>
+    <div id="commaPrice"></div><br>
+    <div id="list"></div>
+    <script>
+      $(document).ready(function(){
+
+
+
+				/** util Test **/
+        var util = $.util();
+        var platform = util.platform;
+        var browser = util.browser;
+        var newOpen = util.newOpen;
+        $('#util').append('platform = '+platform);
+        $('#util').append('<br>browser = '+browser);
+        $('#util').append('<br>newOpen = '+newOpen);
+
+
+
+
+				/** createForm, createInput Test **/
+				var form = $.createForm('put');
+				$.createInput(form,'foo','bar');
+				$.createInput(form,'boo','bar2');
+
+
+				/** ajax Test **/
+				// jQuery.ajaxFnImage(url,form,method,function(data){
+				// 	console.log(data);
+				// },false);
+				// jQuery.ajaxFn(url,form,method,function(data){
+				// 	console.log(data);
+				// },false);
+
+
+				/** replaceAll Test **/
+				var text = 'hello javascript world';
+				var replaceText = text.replace('javascript', 'jQuery');
+				$('#replace').html('replaceText = '+replaceText);
+
+
+				/** setPriceComma Test **/
+				var price = '111222333444';
+				var commaPrice = price.setPriceComma();
+				$('#commaPrice').html('commaPrice = '+commaPrice);
+
+
+				/** list remove Test **/
+				var array = ['foo', 'boo', 'coo?', 'doo?'];
+				array.remove(2);
+				$('#list').html(JSON.stringify(array));
+      });
+    </script>
+	</body>
+</html>
