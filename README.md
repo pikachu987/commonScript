@@ -1,7 +1,14 @@
 # Crop
 ### JavaScript
 
-Quick ImageCrop JavaScript
+Quick Util JavaScript
+//platform
+//browser
+//isNewOpen
+//array remove
+//replace
+//comma
+
 
 ## Example
 
