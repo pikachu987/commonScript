@@ -5,7 +5,14 @@ Quick Util JavaScript
 #####platform
 #####browser
 #####isNewOpen
-#####array remove
+#####createForm
+#####createInput
+#####ajaxFormData
+#####ajaxSerialize
+#####backpage
+#####dom offset
+#####Infinite scrollEvent
+#####array remve
 #####replace
 #####comma
 
