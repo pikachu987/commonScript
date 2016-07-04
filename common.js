@@ -33,6 +33,13 @@ $(function(){
 		newOpen : function(){
 			return $.util().newOpen;
 		},
+		createInput : function(form, name, value){
+			var input = document.createElement("input");
+			input.setAttribute("type", "hidden");
+			input.setAttribute("name", name);
+			input.setAttribute("value", value);
+			form.appendChild(input);
+		},
 		createForm : function(method,name){
 			var form = document.createElement("form");
 			if(name === undefined){
@@ -47,13 +54,6 @@ $(function(){
 				jQuery.createInput(form, "_method", method);
 			}
 			return form;
-		},
-		createInput : function(form, name, value){
-			var input = document.createElement("input");
-			input.setAttribute("type", "hidden");
-			input.setAttribute("name", name);
-			input.setAttribute("value", value);
-			form.appendChild(input);
 		},
 		ajaxFnImage : function(url,form,method,requestFunction,async){
 			var formData = new FormData(form);
