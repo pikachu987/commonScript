@@ -30,16 +30,26 @@ Quick Util JavaScript
 <script type="text/javascript">
 $(document).ready(function(){
     /** util Test **/
-    var util = $.util();
-    var platform = util.platform;
-    var browser = util.browser;
-    var newOpen = util.newOpen;
+    var platform = $.platform();
+    var browser = $.browser();
+    var newOpen = $.newOpen();
     $('#util').append('platform = '+platform);
     $('#util').append('<br>browser = '+browser);
     $('#util').append('<br>newOpen = '+newOpen);
 
 
+    /** javascript backPage Set **/
+    $.backPage('index'); /** no search **/
+    $.backPageSearch('index'); /** href + search **/
 
+    /** dom offset **/
+    $.getOffset(document.getElementById('id')).top;
+    $.getOffset(document.getElementById('id')).left;
+
+    /** F5 refresh and browser exit -> confirm Window **/
+    $.closeConfirm(true);
+    /** F5 refresh and browser exit -> no confirm Window **/
+    $.closeConfirm(false);
 
     /** createForm, createInput Test **/
     var form = $.createForm('put');
